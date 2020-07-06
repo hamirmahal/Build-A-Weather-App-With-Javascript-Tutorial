@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  if (navigator.geolocation)
+    alert('Location discernible');
+  else
+    alert('Location indiscernible.');
   return (
     <div className="App">
       <header className="App-header">
