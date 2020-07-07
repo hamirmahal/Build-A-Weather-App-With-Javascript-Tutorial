@@ -4,9 +4,11 @@ import './App.css';
 
 function App() {
   if (navigator.geolocation)
-    alert('Location discernible');
-  else
-    alert('Location indiscernible.');
+    navigator.geolocation.getCurrentPosition(i => {
+      console.log(i);
+      alert('Location discernible');              } );
+  else  { alert('Location indiscernible!')  }
+  alert('End of if-else block');
   return (
     <div className="App">
       <header className="App-header">
