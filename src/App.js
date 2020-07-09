@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  if (navigator.geolocation)
-    navigator.geolocation.getCurrentPosition(i => {
-      console.log(i);
-      alert('Location discernible');              } );
-  else  { alert('Location indiscernible!')  }
-  alert('End of if-else block');
+  let latitude, longitude;
+  navigator.geolocation.getCurrentPosition( position  =>
+    { latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
+      alert(latitude);    alert(longitude); },    ()  =>
+    { latitude = 37.63;
+      longitude = -122.46;
+      alert(latitude);    alert(longitude); }         );
   return (
     <div className="App">
       <header className="App-header">
