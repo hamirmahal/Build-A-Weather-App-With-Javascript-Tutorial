@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5fc663c4cbcb1c67c66e99834920cfaa",
+    "revision": "4a918c3e1eecfa4501bf140dda1c65e6",
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/index.html"
   },
   {
-    "revision": "fc0c880544fea8afe6a3",
+    "revision": "c538473ff01ac869e520",
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.84241141.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fc0c880544fea8afe6a3",
-    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.9f227e33.chunk.js"
+    "revision": "c538473ff01ac869e520",
+    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.0799d9ef.chunk.js"
   },
   {
     "revision": "c1ccae4cc68ca187fcf4",
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/runtime-main.7585ac54.js"
   },
   {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/logo.5d5d9eef.svg"
+    "revision": "543b2b9da24b87d0e3d14b6fc7f60a31",
+    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/logo.543b2b9d.svg"
   }
 ]);
