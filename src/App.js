@@ -4,51 +4,42 @@ import sun from './the-sun-symbol.png';
 import './App.css';
 
 function App() {
-  const [itIsDaytime, setTimeOfDay] = useState(false);
+  const [itIsDaytime,setItIsDaytime] = useState(false);
   const key = 'fd9d9c6418c23d94745b836767721ad1/';
   const ds = 'https://api.darksky.net/forecast/';
   const proxy = 'https://cors-anywhere.herokuapp.com/';
-  useEffect(                                  ()  =>  {
-    navigator.geolocation.getCurrentPosition(
-      position  =>                                  {
-        let { latitude, longitude } = position.coords;
-        alert(latitude);
-        alert(longitude);
-        const coordinate = `/${latitude},${longitude}`;
-        const api = `${proxy}${ds}${key}${coordinate}`;
-        fetch(api).then( response => response.json() )
-          .then( rJSON => {
-            console.log(rJSON);
-            console.log(rJSON.currently);
-            console.log(rJSON.currently.time);
-            console.log(rJSON.daily);
-            console.log(rJSON.daily.data);
-            console.log(rJSON.daily.data[0]);
-            const { sunriseTime, sunsetTime } = 
-              rJSON.daily.data[0];
-            const { time } = rJSON.currently;
-            if ( sunriseTime <= time <= sunsetTime)
-              setTimeOfDay(true);              } ); },
-      ()  =>                                   {
-        let latitude = 37.63;
-        let longitude = -122.46;
-        alert(latitude);
-        alert(longitude);
-        const coordinate = `/${latitude},${longitude}`;
-        const api = `${proxy}${ds}${key}${coordinate}`;
-        fetch(api).then( response => response.json() )
-          .then( rJSON =>         {
-            console.log(rJSON);
-            console.log(rJSON.currently);
-            console.log(rJSON.currently.time);
-            console.log(rJSON.daily);
-            console.log(rJSON.daily.data);
-            console.log(rJSON.daily.data[0]);
-            const { sunriseTime, sunsetTime } = 
-              rJSON.daily.data[0];
-            const { time } = rJSON.currently;
-            if ( sunriseTime <= time <= sunsetTime)
-              setTimeOfDay(true);});});} )
+  
+  useEffect(() => getAndAnalyzeLatitudeAndLongitude());
+  function getAndAnalyzeLatitudeAndLongitude()
+  { navigator.geolocation.getCurrentPosition( p =>
+    extractWithProvided(p), extractWithDefault()  );  }
+
+  function extractWithProvided(userPosition)
+  { const { latitude,longitude } = userPosition.coords;
+    extractFromAPI( latitude, longitude ); }
+
+  function extractWithDefault()
+  { const defaultLatitude = 37.63;
+    const defaultLongitude = -122.46;
+    extractFromAPI(defaultLatitude, defaultLongitude);}
+
+  function extractFromAPI( efLatitude , efLongitude )
+  { console.log(efLatitude);
+    console.log(efLongitude);
+    const coordinate = `/${efLatitude},${efLongitude}`;
+    const apiURL = `${proxy}${ds}${key}${coordinate}`;
+    fetch(apiURL).then(r => r.json()).then(j => {
+      console.log(j);
+      console.log(j.currently);
+      console.log(j.currently.time);
+      console.log(j.daily);
+      console.log(j.daily.data);
+      console.log(j.daily.data[0]);
+      const {sunriseTime,sunsetTime} = j.daily.data[0];
+      const {temperature, time, summary} = j.currently;
+      if ( sunriseTime <= time && time <= sunsetTime )
+        setItIsDaytime(true);                   } );  }
+
   return (
     <div className="App">
       <header className="App-header" style={{
