@@ -44,10 +44,12 @@ function App() {
     <div className="App">
       <header className="App-header" style={{
       backgroundColor: itIsDaytime ? 'aqua':'black',
-      color: itIsDaytime && 'black'}}>
+      color:itIsDaytime&&'black',position:'relative'}}>
         { itIsDaytime ? <img src={sun}
           className="App-logo" alt="sun" /> : <img
           src={moon} className="App-logo" alt="moon"/>}
+        <h1 style={temperatureStyle}>74</h1>
+        {/* <h1 style={degreeStyle}>°</h1> */}
         <p>
           View the tutorial Hamir is using to create
           this web application <a href=
@@ -67,5 +69,25 @@ function App() {
     </div>
   );
 }
+
+const temperatureStyle = {
+  // backgroundColor: 'pink',
+  color: 'black',
+  fontSize: '20vmin',
+  height: '30vmin',
+  left: '50%',
+  position: 'absolute',
+  top: '30%',
+  transform: 'translate(-50%, -50%)'
+}
+
+// const degreeStyle = {
+//   backgroundColor: 'aqua',
+//   fontSize: '20vmin',
+//   height: '20vmin',
+//   left: '65%',
+//   position: 'absolute',
+//   transform: 'translate(-50%, -50%)'
+// }
 
 export default App;
