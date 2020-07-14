@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/Build-A-Weather-App-With-Javascript-Tutorial/static/css/main.5f361e03.chunk.css",
-    "main.js": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.98ad9e43.chunk.js",
-    "main.js.map": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.98ad9e43.chunk.js.map",
+    "main.js": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.b0e9ff1d.chunk.js",
+    "main.js.map": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.b0e9ff1d.chunk.js.map",
     "runtime-main.js": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/runtime-main.7585ac54.js",
     "runtime-main.js.map": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/runtime-main.7585ac54.js.map",
-    "static/js/2.114bfd4f.chunk.js": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.114bfd4f.chunk.js",
-    "static/js/2.114bfd4f.chunk.js.map": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.114bfd4f.chunk.js.map",
+    "static/js/2.f30625a5.chunk.js": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.f30625a5.chunk.js",
+    "static/js/2.f30625a5.chunk.js.map": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.f30625a5.chunk.js.map",
     "index.html": "/Build-A-Weather-App-With-Javascript-Tutorial/index.html",
-    "precache-manifest.a98cb6a05486e1a8a18826446b5476e4.js": "/Build-A-Weather-App-With-Javascript-Tutorial/precache-manifest.a98cb6a05486e1a8a18826446b5476e4.js",
+    "precache-manifest.1ef56033e02efb5e160e43f03269280d.js": "/Build-A-Weather-App-With-Javascript-Tutorial/precache-manifest.1ef56033e02efb5e160e43f03269280d.js",
     "service-worker.js": "/Build-A-Weather-App-With-Javascript-Tutorial/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/Build-A-Weather-App-With-Javascript-Tutorial/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.114bfd4f.chunk.js.LICENSE.txt": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.114bfd4f.chunk.js.LICENSE.txt",
+    "static/js/2.f30625a5.chunk.js.LICENSE.txt": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.f30625a5.chunk.js.LICENSE.txt",
     "static/media/Full-Moon-PNG-Transparent-Img.png": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/Full-Moon-PNG-Transparent-Img.31501bc8.png",
+    "static/media/foggy-day-sun.png": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/foggy-day-sun.fbb1f177.png",
     "static/media/the-sun-symbol.png": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/the-sun-symbol.d5784c36.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7585ac54.js",
-    "static/js/2.114bfd4f.chunk.js",
+    "static/js/2.f30625a5.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.98ad9e43.chunk.js"
+    "static/js/main.b0e9ff1d.chunk.js"
   ]
 }

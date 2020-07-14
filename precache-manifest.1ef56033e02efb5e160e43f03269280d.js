@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "181347daa890f6c0beb77f414a7e7373",
+    "revision": "ab1d9c2438549de4ed46deccd229f555",
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/index.html"
   },
   {
-    "revision": "def5feb60931c9b26541",
+    "revision": "e6a38574cfa97960e35b",
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "4111e14cbe08d791096c",
-    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.114bfd4f.chunk.js"
+    "revision": "fe31396f8682b43e0b7a",
+    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.f30625a5.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.114bfd4f.chunk.js.LICENSE.txt"
+    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/2.f30625a5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "def5feb60931c9b26541",
-    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.98ad9e43.chunk.js"
+    "revision": "e6a38574cfa97960e35b",
+    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/js/main.b0e9ff1d.chunk.js"
   },
   {
     "revision": "c1ccae4cc68ca187fcf4",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "31501bc85e6ac70c7438151fe80764b4",
     "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/Full-Moon-PNG-Transparent-Img.31501bc8.png"
+  },
+  {
+    "revision": "fbb1f177b203aabaca3f503eaab5ac30",
+    "url": "/Build-A-Weather-App-With-Javascript-Tutorial/static/media/foggy-day-sun.fbb1f177.png"
   },
   {
     "revision": "d5784c36b7e88057c08b0c6010367c75",
