@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.Temperature {
+  color: black;
+  font-size: 8vmin;
+  left: 1vmin;
+  position: relative;
+  top: -30.5vmin;
+}
+
+.Unit {
+  font-size: 3vmin;
+  position: relative;
+  right: 2.2vmin;
+}
