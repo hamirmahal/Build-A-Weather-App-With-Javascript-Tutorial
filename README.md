@@ -1,3 +1,16 @@
+This project is what I've written to adopt Dev Ed's
+[Build A Weather App With Vanilla Javascript Tutorial | Javascript For Beginners](https://www.youtube.com/watch?v=wPElVpR1rwA)
+for React.js.
+
+This is what the night theme on this weather app
+looks like as of 9:28 PM PST Wednesday, July 15, 2020.
+
+![night theme for weather app](https://raw.githubusercontent.com/hamirmahal/Build-A-Weather-App-With-Javascript-Tutorial/master/Night-Theme-for-Dev-Ed's-Build-a-Weather-App-with-JavaScript-Tutorial.jpg)
+
+create-react-app automatically generated
+everything after this paragraph except the blank line
+immediately following it.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

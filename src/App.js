@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import blueSun from './rainy-day-sun.png';
 import graySun from './foggy-day-sun.png';
 import moon from './Full-Moon-PNG-Transparent-Img.png';
 import sun from './the-sun-symbol.png';
+import umbrella from './OpenUmbrella_PNG_Clip_Art.png';
 import './App.css';
 
-function App() {
-  const [ weather , setWeather ] = useState();
+export default function App() {
+  const [ summary, setSummary ] = useState();
+  const [ temperature, setTemperature ] = useState();
+  const [ timezone, setTimezone ] = useState();
+  const [ weather , setWeather ] = useState('');
   const key = 'fd9d9c6418c23d94745b836767721ad1/';
   const ds = 'https://api.darksky.net/forecast/';
   const proxy = 'https://cors-anywhere.herokuapp.com/';
   
-  useEffect(() => getAndAnalyzeLatitudeAndLongitude());
-  function getAndAnalyzeLatitudeAndLongitude()
+  useEffect( () => analyzeLatitudeAndLongitude(), [] );
+  function analyzeLatitudeAndLongitude()
   { navigator.geolocation.getCurrentPosition( pos =>
     extractWithProvided(pos), extractWithDefault() ); }
 
@@ -31,73 +34,76 @@ function App() {
     const coordinate = `/${efLatitude},${efLongitude}`;
     const apiURL = `${proxy}${ds}${key}${coordinate}`;
     fetch(apiURL).then(resp => resp.json()).then(j => {
-      console.log(j.currently);
+      const { timezone } = j;           console.log(j);
       const {icon, summary, temperature} = j.currently;
-      setWeather(icon);
-      console.log(j);
-      const timezone = { j }; }                 );    }
+      console.log(j.currently);
+      setSummary(summary);
+      setTemperature(temperature);
+      setTimezone(timezone);
+      setWeather(icon);                }        );    }
 
   function getImageFor(typeOfWeather)
-  { if (typeOfWeather === 'clear-day')
-      return <img src={sun} className="App-logo"
-        alt="sun" />;
+  { let alt = "sun"; let c = "App-logo"; let src = sun;
     
-    if ( typeOfWeather === 'partly-cloudy-day' ||
-      typeOfWeather==='cloudy'||typeOfWeather==='fog' )
-      return <img src={graySun} className="App-logo"
-        alt="gray sun" />;
+    if(typeOfWeather==='cloudy'||typeOfWeather==='fog')
+    { alt="gray sun";                    src=graySun; }
+    
+    if (typeOfWeather.includes('night'))
+    { alt="moon";                           src=moon; }
 
-    if (typeOfWeather === 'rain')
-      return <img src={blueSun} className="App-logo"
-        alt="blue sun" />;
+    if(typeOfWeather==='rain'||typeOfWeather==='sleet')
+    { alt="umbrella";                   src=umbrella; }
 
-    return <img src={moon} className="App-logo"
-      alt="moon" />; }
+    return <img src={src} className={c} alt={alt} />; }
   
   function getStylingFor(typeOfWeather)
-  { let backgroundColor = 'black';
+  { let backgroundColor = 'skyblue';
     let color = 'white';
-        
-    if (typeOfWeather === 'clear-day')
-    { backgroundColor = 'aqua';
-      color = 'black'; }
 
-    if ( typeOfWeather === 'partly-cloudy-day' ||
-      typeOfWeather==='cloudy'||typeOfWeather==='fog' )
+    if(typeOfWeather==='cloudy'||typeOfWeather==='fog')
       backgroundColor = 'gray';
+
+    if (typeOfWeather.includes('night'))
+      backgroundColor = 'black';
         
-    if (typeOfWeather === 'rain')
-    { backgroundColor = 'blue';
-      color = 'black'; }
+    if(typeOfWeather==='rain'||typeOfWeather==='sleet')
+      backgroundColor = 'dark blue';
     
-    return {  backgroundColor , color }; }
+    if (typeOfWeather === 'snow')
+    { backgroundColor = 'white';     color = 'black'; }
+    
+    return { backgroundColor , color };               }
 
   return (
     <div className="App">
       <header className="App-header"
         style={getStylingFor(weather)}>
         {getImageFor(weather)}
-        <h1 className="Temperature">
-          74°<abbr className="Unit" title='Fahrenheit'>
+        <h1 className="Temperature"> {temperature}
+          °<abbr className="Unit" title='Fahrenheit'>
           F</abbr></h1>
         <p>
+          {summary}
+          <br />
+          <br />
+          Timezone: {timezone}
+          <br />
+          <br />
           <a  href  =
           'https://www.youtube.com/watch?v=wPElVpR1rwA'
           rel='noopener noreferrer' target='_blank'>
           View the tutorial</a> Hamir is using to
           create this web application.
         </p>
-        <a
+        <a 
           className="App-link"
-          href="https://reactjs.org"
+          href="https://darksky.net/poweredby/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Powered by Dark Sky
         </a>
       </header>
     </div>
   );
 }
-
-export default App;
