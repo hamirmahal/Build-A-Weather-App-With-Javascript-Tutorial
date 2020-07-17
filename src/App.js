@@ -6,9 +6,11 @@ import umbrella from './OpenUmbrella_PNG_Clip_Art.png';
 import './App.css';
 
 export default function App() {
-  const [ summary, setSummary ] = useState();
-  const [ temperature, setTemperature ] = useState();
-  const [ timezone, setTimezone ] = useState();
+  const [ summary , setSummary ] = useState();
+  const [ gTemp , setGlobalTemperature ] = useState(135);
+  const [ timezone , setTimezone ] = useState();
+  const [ units , setUnits ] = useState('F');
+  const [ uTitle, setuTitle ] = useState('Fahrenheit');
   const [ weather , setWeather ] = useState('');
   const key = 'fd9d9c6418c23d94745b836767721ad1/';
   const ds = 'https://api.darksky.net/forecast/';
@@ -38,7 +40,7 @@ export default function App() {
       const {icon, summary, temperature} = j.currently;
       console.log(j.currently);
       setSummary(summary);
-      setTemperature(temperature);
+      setGlobalTemperature(temperature);
       setTimezone(timezone);
       setWeather(icon);                }        );    }
 
@@ -74,14 +76,27 @@ export default function App() {
     
     return { backgroundColor , color };               }
 
+  function toggleUnits()
+  { if (units === 'F')
+    { setGlobalTemperature( (gTemp - 32) / 1.8 );
+      setUnits('C');      setuTitle('Celsius'); }
+      
+    if (units === 'C')
+    { setGlobalTemperature( gTemp + 273.15 );
+      setUnits('K');   setuTitle('Kelvin'); }
+
+    if (units === 'K')
+    { setGlobalTemperature((gTemp-273.15) * 1.8 + 32);
+      setUnits('F');        setuTitle('Fahrenheit'); }}
+
   return (
     <div className="App">
       <header className="App-header"
         style={getStylingFor(weather)}>
         {getImageFor(weather)}
-        <h1 className="Temperature"> {temperature}
-          °<abbr className="Unit" title='Fahrenheit'>
-          F</abbr></h1>
+        <h1 className="Temperature">{Math.round(gTemp)}
+          °<abbr className="Unit" onClick={toggleUnits}
+          title={uTitle}>{units} </abbr> </h1>
         <p>
           {summary}
           <br />

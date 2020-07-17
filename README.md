@@ -3,9 +3,16 @@ This project is what I've written to adopt Dev Ed's
 for React.js.
 
 This is what the night theme on this weather app
-looks like as of 9:28 PM PST Wednesday, July 15, 2020.
+looks like with the units in Fahrenheit
+as of 10:42 PM PST Thursday, July 16, 2020.
 
-![night theme for weather app](https://raw.githubusercontent.com/hamirmahal/Build-A-Weather-App-With-Javascript-Tutorial/master/Night-Theme-for-Dev-Ed's-Build-a-Weather-App-with-JavaScript-Tutorial.jpg)
+![night theme for weather app in degrees Fahrenheit](https://raw.githubusercontent.com/hamirmahal/Build-A-Weather-App-With-Javascript-Tutorial/master/Night-Theme-for-Dev-Ed's-Build-a-Weather-App-with-JavaScript-Tutorial-Fahrenheit.jpg)
+
+This is what the night theme on this weather app
+looks like with the units in Celsius
+as of 10:43 PM PST Thursday, July 16, 2020.
+
+![night theme for weather app in degrees Celsius](https://raw.githubusercontent.com/hamirmahal/Build-A-Weather-App-With-Javascript-Tutorial/master/Night-Theme-for-Dev-Ed's-Build-a-Weather-App-with-JavaScript-Tutorial-Celsius.jpg)
 
 create-react-app automatically generated
 everything after this paragraph except the blank line
