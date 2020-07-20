@@ -39,6 +39,7 @@
 
 .Temperature {
   color: black;
+  cursor: pointer;
   font-size: 8vmin;
   left: 1vmin;
   position: relative;
